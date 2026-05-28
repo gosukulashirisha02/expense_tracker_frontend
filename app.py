@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import pandas as pd
 
-server_loc="http://127.0.0.1:8000"
+server_loc=st.secrets["SERVER_URL"]
 
 st.title("Expensive Tracker Application")
 opt=st.sidebar.selectbox("choose operations:--",["Add Expense","view Expense","Update Expense",
@@ -20,12 +20,12 @@ if opt =="Add Expense":
             "category",
             [
                 "",
-                "food",
-                "travel",
-                "shopping",
-                "bills",
-                "entertainment",
-                "other"
+                "Food",
+                "Travel",
+                "Shopping",
+                "Bills",
+                "Entertainment",
+                "Other"
             ]
         )
         
