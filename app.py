@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import pandas as pd
 
-server_loc=st.secrets["SERVER_URL"]
+server_loc=st.secrets["SERVER_URL"].rstrip("/")
 
 st.title("Expensive Tracker Application")
 opt=st.sidebar.selectbox("choose operations:--",["Add Expense","view Expense","Update Expense",
